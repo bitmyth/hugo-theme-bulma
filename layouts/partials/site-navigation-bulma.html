@@ -3,7 +3,7 @@
         <div class="navbar-brand p-4">
             <a href="{{ .Site.Home.RelPermalink }}" class="navbar-item">
                 {{ with .Site.Params.site_logo }}
-                    <img src="{{ . }}" width="112" height="28"  alt="{{ $.Site.Title }}" />
+                    <img src="{{ . }}" width="112" height="28" alt="{{ $.Site.Title }}"/>
                 {{ else }}
                     {{ .Site.Title }}
                 {{ end }}
@@ -32,21 +32,21 @@
                     {{ end }}
                 {{ end }}
 
-                {{/*<div class="navbar-item has-dropdown is-hoverable">*/}}
-                {{/*<a class="navbar-link">*/}}
-                {{/*More*/}}
-                {{/*</a>*/}}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
 
-                {{/*<div class="navbar-dropdown">*/}}
-                {{/*<a class="navbar-item">*/}}
-                {{/*Contact*/}}
-                {{/*</a>*/}}
-                {{/*<hr class="navbar-divider">*/}}
-                {{/*<a class="navbar-item">*/}}
-                {{/*Report an issue*/}}
-                {{/*</a>*/}}
-                {{/*</div>*/}}
-                {{/*</div>*/}}
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/codemirror-5.58.3/demo/a.html#material">
+                            Contact
+                        </a>
+                        {{/*<hr class="navbar-divider">*/}}
+                        {{/*<a class="navbar-item">*/}}
+                        {{/*Report an issue*/}}
+                        {{/*</a>*/}}
+                    </div>
+                </div>
             </div>
 
             <div class="navbar-end">
@@ -76,7 +76,7 @@
         if ($navbarBurgers.length > 0) {
 
             // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
+            $navbarBurgers.forEach(el => {
                 el.addEventListener('click', () => {
 
                     // Get the target from the "data-target" attribute
