@@ -24,21 +24,19 @@
                             {{- partial "tags-bulma.html" . -}}
                         </div>
                     </div>
-                    <div class="level">
-                        <div class="level-left">
+                    <div class="">
                             {{ with .Params.author }}
-                            <div class="level-item">
+                            <span class="m-1">
                                 {{ if reflect.IsSlice . }}
                                     {{ delimit . ", " | markdownify }}
                                 {{else}}
                                     {{ . | markdownify }}
                                 {{ end }}
-                            </div>
+                            </span>
                             {{ end }}
-                            <div class="level-item">
+                            <span class="m-1">
                                 {{- .Date.Format "2006-01-02 03:04" -}}
-                            </div>
-                        </div>
+                            </span>
                     </div>
                     <p class="has-text-weight-light">
                         {{ .Summary }}
