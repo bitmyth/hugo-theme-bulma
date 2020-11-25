@@ -25,7 +25,7 @@
         {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (first $n_posts $section) }}
-          <div class="">
+          <div class="mb-4">
             {{ partial "summary-with-image-bulma.html" . }}
           </div>
         {{ end }}
